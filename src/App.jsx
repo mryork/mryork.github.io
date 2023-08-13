@@ -5,11 +5,18 @@ import MapPin from "./icons/map-pin.jsx";
 import Megaphone from "./icons/megaphone.jsx";
 import frclogo from "./FRC-Logo.png";
 import { useRef } from "react";
+import NavLink from "./components/NavLink.jsx";
+import Experience from "./components/Experience.jsx";
+
+import optum from './data/optum.js';
+import keytoescape from "./data/keytoescape.js";
 
 function App() {
   const experience = useRef();
   const interests = useRef();
   const volunteering = useRef();
+  
+  const experienceData = [optum, keytoescape];
 
   return (
     <div className="bg-dark-blue-gray p-12 text-gray-200 font-bricolagegrotesque flex flex-row justify-center">
@@ -50,124 +57,17 @@ function App() {
             ref={experience}
           >
             <h3 className="text-2xl font-bold">Experience</h3>
-            <div className="flex flex-row flex-wrap gap-4 md:gap-0">
-              <div className="w-full md:w-1/4">
-                <h4 className="text-xl leading-8">Optum</h4>
-                <div className="flex flex-col leading-5">
-                  <span>June 2021 - Present</span>
-                  <span>Remote</span>
-                </div>
-              </div>
-              <div className="w-full md:w-3/4">
-                <h5 className="text-lg font-bold mb-1">
-                  Senior Software Engineer
-                </h5>
-                <ul className="list-disc ml-6 break-normal mb-4">
-                  <li>
-                    Delivered a new custom content-management tool for an
-                    internal training platform using Next.js, increasing
-                    administrator productivity through detailed user interviews
-                  </li>
-                  <li>
-                    Enabled the development of new content-management tool
-                    through automatic GraphQL API generation, based on defined
-                    record types
-                  </li>
-                  <li>
-                    Adopted an engineer-facing training application,
-                    collaborating with business stakeholders, users, and other
-                    engineers in an agile fashion to improve site functionality
-                    and the user experience
-                  </li>
-                  <li>
-                    Presented completed work, proposals for solutions, and
-                    opportunities for improvement to business stakeholders in a
-                    clear and concise manager, practicing a zero-distance
-                    mindset
-                  </li>
-                </ul>
-                <div className="flex flex-row flex-wrap gap-2">
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    GraphQL
-                  </div>
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    Next.js
-                  </div>
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    React
-                  </div>
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    Azure
-                  </div>
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    MongoDB
-                  </div>
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    Figma
-                  </div>
-                  <div className="rounded-3xl bg-yellow-600 hover:bg-yellow-700 cursor-default px-3 py-1">
-                    Requirement Collection
-                  </div>
-                  <div className="rounded-3xl bg-yellow-600 hover:bg-yellow-700 cursor-default px-3 py-1">
-                    Stakeholder Engagement
-                  </div>
-                  <div className="rounded-3xl bg-yellow-600 hover:bg-yellow-700 cursor-default px-3 py-1">
-                    Agile Development
-                  </div>
-                  <div className="rounded-3xl bg-blue-800 hover:bg-blue-900 cursor-default px-3 py-1">
-                    Communication
-                  </div>
-                  <div className="rounded-3xl bg-blue-800 hover:bg-blue-900 cursor-default px-3 py-1">
-                    Mentorship
-                  </div>
-                  <div className="rounded-3xl bg-blue-800 hover:bg-blue-900 cursor-default px-3 py-1">
-                    Public Speaking
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row flex-wrap gap-4 md:gap-0">
-              <div className="w-full md:w-1/4">
-                <h4 className="text-xl leading-8">Key to Escape</h4>
-                <div className="flex flex-col leading-5">
-                  <span>April 2018 - April 2021</span>
-                  <span>Statesville, NC</span>
-                </div>
-              </div>
-              <div className="w-full md:w-3/4">
-                <h5 className="text-lg font-bold mb-1">
-                  Internet of Things (IoT) Engineer
-                </h5>
-                <ul className="list-disc ml-6 break-normal mb-4">
-                  <li>
-                    Collaborated with hardware engineers to develop solutions
-                    for escape room entertainment, particularly props
-                  </li>
-                  <li>
-                    Consulted on technical and non-technical solutions that
-                    helped make this a top-100 worldwide rated escape room,
-                    including methods to increase immersion, management, and
-                    maintenance
-                  </li>
-                </ul>
-                <div className="flex flex-row flex-wrap gap-2">
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    Arduino
-                  </div>
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    Javascript
-                  </div>
-                  <div className="rounded-3xl bg-pink-800 hover:bg-pink-900 cursor-default px-3 py-1">
-                    C++
-                  </div>
-                  <div className="rounded-3xl bg-yellow-600 hover:bg-yellow-700 cursor-default px-3 py-1">
-                    Customer Interaction
-                  </div>
-                  <div className="rounded-3xl bg-blue-800 hover:bg-blue-900 cursor-default px-3 py-1">
-                    Problem-Solving
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-row flex-wrap gap-4 md:gap-10">
+              {experienceData.map((data) => (
+                <Experience
+                  employer={data.name}
+                  bullets={data.bullets}
+                  position={data.position}
+                  skills={data.skills}
+                  location={data.location}
+                  timeframe={data.timeframe}
+                />
+              ))}
             </div>
           </div>
           <div className="pt-8 w-full flex flex-col gap-8" ref={interests}>
@@ -248,22 +148,6 @@ function App() {
       </div>
     </div>
   );
-
-  function NavLink({ text, scroll }) {
-    console.log(scroll);
-    return (
-      <button
-        onClick={() => {
-          scroll.current.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-        className="bg-gray-700 px-4 py-2 rounded-2xl text-center hover:bg-gray-800 cursor-pointer"
-      >
-        {text}
-      </button>
-    );
-  }
 }
 
 export default App;
