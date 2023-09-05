@@ -7,7 +7,7 @@ export default {
     "Delivered a new custom content-management tool for an internal training platform using Next.js, increasing administrator productivity through detailed user interviews",
     "Enabled the development of new content-management tool through automatic GraphQL API generation, based on defined record types",
     "Adopted an engineer-facing training application, collaborating with business stakeholders, users, and other engineers in an agile fashion to improve site functionality and the user experience",
-    "Presented completed work, proposals for solutions, and opportunities for improvement to business stakeholders in a clear and concise manager, practicing a zero-distance mindset",
+    "Presented completed work, proposals for solutions, and opportunities for improvement to business stakeholders in a clear and concise manner, practicing a zero-distance mindset",
   ],
   skills: [
     {
