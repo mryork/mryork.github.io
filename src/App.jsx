@@ -26,7 +26,7 @@ function App() {
             <h1 className="font-pacifico text-5xl pb-8 bg-gradient-to-r bg-no-repeat from-pink-700 via-yellow-500 to-sky-500 text-transparent bg-clip-text bg-800% animate-gradient">
               Morgan York
             </h1>
-            <h2 className="text-3xl">Senior Software Engineer</h2>
+            <h2 className="text-3xl">Lead Software Engineer</h2>
           </div>
           <div className="md:ml-auto">
             <div className="flex flex-col gap-2 items-start">
