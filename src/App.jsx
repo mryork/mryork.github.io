@@ -125,8 +125,7 @@ function App() {
                   <i>FIRST</i> &reg; Volunteer
                 </h4>
                 <h5 className="text-lg">
-                  <i>FIRST</i> Technical Advisor Assistant, Control System
-                  Advisor, Robot Inspector
+                  <i>FIRST</i> Technical Advisor
                 </h5>
                 <p>
                   As an alumnus of this program, I have first-hand experience in
