@@ -128,7 +128,7 @@ function App() {
                   <i>FIRST</i> Technical Advisor
                 </h5>
                 <p>
-                  As an alumnus of this program, I have first-hand experience in
+                  As an alum of this program, I have first-hand experience in
                   how it can help students grow as individuals: not only in STEM
                   skills, but also through communication, problem-solving, and
                   collaboration.
